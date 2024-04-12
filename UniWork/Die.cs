@@ -11,15 +11,14 @@ namespace UniWork
 
         private int value;      //current value 
         private int maxValue;   // the maximum value the dice can be 
-
+        Random rd;
         /// <summary>
         /// rolles the die and gets a value from 1 to maxvalue (inclusive)
         /// </summary>
         /// <returns>the value rolled</returns>
         public int Roll()
         {
-            Random rd = new Random();
-            this.value = rd.Next(1, maxValue + 1); // lowwer bound is inclusive; upper bound is exclusive 
+            this.value = this.rd.Next(1, maxValue + 1); // lowwer bound is inclusive; upper bound is exclusive 
             return this.value;
         }
 
@@ -38,6 +37,14 @@ namespace UniWork
         /// <param name="maxValue">the maximum value that the die can roll</param>
         public Die(int maxValue = 6)    //made an initaliser so that the class is more adaptable 
         {
+            this.rd = new Random();
+
+
+
+
+
+
+
             if (maxValue < 1)    //dice cannot have less than 1 side
             {
                 throw new ArgumentOutOfRangeException("should be 1 or higher"); //throws error

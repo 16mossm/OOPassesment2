@@ -10,6 +10,10 @@ namespace UniWork
     {
         static void Main(string[] args)
         {
+            Game a = new SevensOut();
+            a.playGame();
+
+            Console.ReadLine();
         }
     }
 }
