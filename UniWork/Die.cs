@@ -41,10 +41,6 @@ namespace UniWork
 
 
 
-
-
-
-
             if (maxValue < 1)    //dice cannot have less than 1 side
             {
                 throw new ArgumentOutOfRangeException("should be 1 or higher"); //throws error
