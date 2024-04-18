@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace UniWork
 {
+
     class Statistics
     {
 
@@ -19,11 +20,12 @@ namespace UniWork
             ammountOfPlays = new int[2] { 0, 0 };
         }
 
-        public void playGame(Game game, Player[] players)
+        public void playGame(Iplayable game)
         {
             //sevensout = 0
             //threeormore = 1
-            int score = game.playGame(players);
+            while (!game.playGame());
+            int score = game.ShowWinner();
             int gameID = getGameID(game);
 
             if (highscores[gameID] < score)
@@ -33,7 +35,7 @@ namespace UniWork
             ammountOfPlays[gameID]++;
         }
 
-        int getGameID(Game game) {
+        int getGameID(Iplayable game) {
             if (game is SevensOut)
             {
                 return 0;
@@ -45,11 +47,11 @@ namespace UniWork
             }
             return -1;
         }
-        public int getScore(Game game)
+        public int getScore(Iplayable game)
         {
             return highscores[getGameID(game)];
         }
-        public int getPlays(Game game)
+        public int getPlays(Iplayable game)
         {
             return ammountOfPlays[getGameID(game)];
         }
