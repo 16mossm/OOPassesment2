@@ -39,6 +39,7 @@ namespace UniWork
 
         public bool playGame()
         {
+            if (players.Count() <= 0) { throw new Exception("no players detected"); }
             //if 0 is in the array it means a player isnt out
             Console.WriteLine("- - - - - - -");
 
@@ -180,6 +181,7 @@ namespace UniWork
         }
 
         public int ShowWinner() {
+            if (players.Count() <= 0) { throw new Exception("no players detected"); }
             List<string> winningPlayers = new List<string>();
             int highestScore = 0;
             for (int i = 0; i < players.Length; i++)
@@ -235,7 +237,7 @@ namespace UniWork
 
         public bool playGame()
         {
-
+            if (players.Count() <= 0) { throw new Exception("no players detected"); }
             //while there is a player who isnt out
 
             Console.WriteLine("- - - - - - -");
@@ -285,6 +287,7 @@ namespace UniWork
         }
         public int ShowWinner()
         {
+            if (players.Count() <= 0) { throw new Exception("no players detected"); }
             //find the highest Scoring player(s):
             int highestScore = 0;
             List<string> winningPlayers = new List<string>();
