@@ -14,18 +14,28 @@ namespace UniWork
             //sevensout = 0
             //threeormore = 1
             bool gameover = false;
+            GameReturn PrevStats = new GameReturn(new int[]{0,0 },new bool[]{ false, false }, false);
             while (!gameover) {
                 GameReturn stats = game.playGame();
                 if (game is SevensOut) {
-                    for(int i = 0; i < stats.playerScoreDifference.Length; i++)
+                    for(int i = 0; i < stats.prevPlayerScore.Length; i++)
                     {
-                        //if the player scores a 7 assert they are out
-                        if (stats.playerScoreDifference[i] == 7)
+
+                        if(PrevStats.prevPlayerScore.Length > i)
                         {
-                            Debug.Assert(stats.playerOut[i]);
+                            Console.WriteLine(stats.playerOut[i]);
+                            if (stats.prevPlayerScore[i] - PrevStats.prevPlayerScore[i] == 7)
+                            {
+                                Debug.Assert(stats.playerOut[i]);
+                                Console.WriteLine("7 found");
+                            }
                         }
+
                     }
+
                 }
+                gameover = stats.gameOver;
+                PrevStats = stats;
             }
 
 
@@ -53,6 +63,9 @@ namespace UniWork
             if (game is ThreeOrMore)
             {
                 return 1;
+            }
+            else {
+                throw new Exception("not a valid game");
             }
             return -1;
         }

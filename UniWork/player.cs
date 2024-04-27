@@ -12,9 +12,10 @@ namespace UniWork
         public bool bot = false;
 
 
-        public Player(string name)
+        public Player(string name , bool bot = false)
         {
             this.name = name;
+            this.bot = bot;
         }
     }
 }

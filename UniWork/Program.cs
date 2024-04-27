@@ -1,4 +1,4 @@
-﻿////#define TEST
+﻿///#define TEST
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +17,7 @@ namespace UniWork
 
 
 #if TEST
-            Player[] players = { new Player("test1"), new Player("test2") };
+            Player[] players = { new Player("test1",true), new Player("test2", true) };
             Testing test = new Testing();
             test.playGame(new SevensOut(players));
             test.playGame(new ThreeOrMore(players));
@@ -35,7 +35,7 @@ namespace UniWork
 
             }
 
-
+            Console.WriteLine("press enter to quit");
             Console.ReadLine();  
 #endif
         }
