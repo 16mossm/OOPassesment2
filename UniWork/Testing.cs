@@ -13,7 +13,20 @@ namespace UniWork
         {
             //sevensout = 0
             //threeormore = 1
-            while (!game.playGame()) ;
+            bool gameover = false;
+            while (!gameover) {
+                GameReturn stats = game.playGame();
+                if (game is SevensOut) {
+                    for(int i = 0; i < stats.playerScoreDifference.Length; i++)
+                    {
+                        //if the player scores a 7 assert they are out
+                        if (stats.playerScoreDifference[i] == 7)
+                        {
+                            Debug.Assert(stats.playerOut[i]);
+                        }
+                    }
+                }
+            }
 
 
             //run the game again and assert that the game did not end early;

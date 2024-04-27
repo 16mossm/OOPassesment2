@@ -12,3 +12,10 @@ C:\Users\static worm\Documents\GitHub\OOPassesment2\UniWork\obj\Debug\UniWork.cs
 C:\Users\static worm\Documents\GitHub\OOPassesment2\UniWork\obj\Debug\UniWork.csproj.CoreCompileInputs.cache
 C:\Users\static worm\Documents\GitHub\OOPassesment2\UniWork\obj\Debug\UniWork.exe
 C:\Users\static worm\Documents\GitHub\OOPassesment2\UniWork\obj\Debug\UniWork.pdb
+C:\Users\xbox\Documents\github\OOPassesment2\UniWork\bin\Debug\UniWork.exe.config
+C:\Users\xbox\Documents\github\OOPassesment2\UniWork\bin\Debug\UniWork.exe
+C:\Users\xbox\Documents\github\OOPassesment2\UniWork\bin\Debug\UniWork.pdb
+C:\Users\xbox\Documents\github\OOPassesment2\UniWork\obj\Debug\UniWork.csproj.AssemblyReference.cache
+C:\Users\xbox\Documents\github\OOPassesment2\UniWork\obj\Debug\UniWork.csproj.CoreCompileInputs.cache
+C:\Users\xbox\Documents\github\OOPassesment2\UniWork\obj\Debug\UniWork.exe
+C:\Users\xbox\Documents\github\OOPassesment2\UniWork\obj\Debug\UniWork.pdb

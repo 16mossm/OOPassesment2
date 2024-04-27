@@ -8,7 +8,7 @@ namespace UniWork
 {
     interface Iplayable
     {
-        bool playGame();
+        GameReturn playGame();
         int ShowWinner();
     }
 
@@ -37,7 +37,7 @@ namespace UniWork
         }
 
 
-        public bool playGame()
+        public GameReturn playGame()
         {
             if (players.Count() <= 0) { throw new Exception("no players detected"); }
             //if 0 is in the array it means a player isnt out
@@ -176,7 +176,7 @@ namespace UniWork
             Console.WriteLine("press enter to continue");
             Console.ReadLine();
 
-            return gameOver;
+            return new GameReturn(PlayerScore,PlayerOut,gameOver);
             //determine winner 
         }
 
@@ -235,7 +235,7 @@ namespace UniWork
             die = new Die();
         }
 
-        public bool playGame()
+        public GameReturn playGame()
         {
             if (players.Count() <= 0) { throw new Exception("no players detected"); }
             //while there is a player who isnt out
@@ -280,9 +280,9 @@ namespace UniWork
 
             if (PlayerOut.Contains<bool>(false))
             {
-                return false;
+                return new GameReturn(PlayerScore, PlayerOut, false);
             }
-            return true;
+            return new GameReturn(PlayerScore, PlayerOut, true);
 
         }
         public int ShowWinner()
