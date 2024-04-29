@@ -45,6 +45,7 @@ namespace UniWork
             {
                 return 1;
             }
+            throw new Exception("invalid game detected");
             return -1;
         }
         public int getScore(Iplayable game)
